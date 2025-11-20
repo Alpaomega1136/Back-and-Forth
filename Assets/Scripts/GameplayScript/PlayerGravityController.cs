@@ -157,4 +157,16 @@ public class PlayerGravityController : MonoBehaviour
             else Gizmos.DrawWireSphere(groundCheckTop.position, groundCheckRadius); // Tidak Kena
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Jika menabrak Rintangan
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("GAME OVER! Kena Paku.");
+            // Nanti kita ganti ini dengan memanggil UI Game Over
+            // Untuk sementara, kita restart level saja:
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
+    }
 }
