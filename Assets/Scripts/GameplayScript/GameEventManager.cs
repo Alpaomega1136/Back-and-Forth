@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class GameEventManager : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class GameEventManager : MonoBehaviour
     public WorldMover[] worldMovers; 
     public Camera mainCamera;
 
+
     void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
 
+    
     void Start()
     {
         // Cari referensi otomatis jika kosong (Safety)
@@ -24,6 +27,10 @@ public class GameEventManager : MonoBehaviour
         if (worldMovers.Length == 0) worldMovers = FindObjectsByType<WorldMover>(FindObjectsSortMode.None);
         if (mainCamera == null) mainCamera = Camera.main;
     }
+
+ 
+
+    
 
     // --- DAFTAR FUNGSI EVENT ---
 

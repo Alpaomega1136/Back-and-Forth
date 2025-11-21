@@ -1,4 +1,7 @@
+using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerGravityController : MonoBehaviour
 {
@@ -24,13 +27,14 @@ public class PlayerGravityController : MonoBehaviour
 
     // DEBUG MODE (Centang ini di Inspector untuk tes mode Zero Gravity)
     [Header("Debug Event")]
-    [SerializeField] private bool isZeroGravityMode = false; 
+    [SerializeField] private bool isZeroGravityMode = false;
+ 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
+
         // Pastikan gravitasi awal benar
         ApplyGravitySettings();
     }
@@ -163,10 +167,13 @@ public class PlayerGravityController : MonoBehaviour
         // Jika menabrak Rintangan
         if (other.CompareTag("Obstacle"))
         {
+          
+
             Debug.Log("GAME OVER! Kena Paku.");
-            // Nanti kita ganti ini dengan memanggil UI Game Over
-            // Untuk sementara, kita restart level saja:
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        
+                // Nanti kita ganti ini dengan memanggil UI Game Over
+                // Untuk sementara, kita restart level saja:
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
     }
 }
