@@ -1,17 +1,29 @@
 using UnityEngine;
 using System.Collections;
-using System.Runtime.CompilerServices;
+using TMPro; // Untuk UI Text
+using UnityEngine.SceneManagement; 
 
 public class GameEventManager : MonoBehaviour
 {
-    public static GameEventManager Instance; // Singleton biar mudah dipanggil
+    public static GameEventManager Instance;
 
-    [Header("Referensi")]
+    [Header("Referensi Utama")]
     public PlayerGravityController player;
-    // Kita pakai array karena mungkin nanti ada banyak object yang bergerak (Lantai, Background, dll)
-    public WorldMover[] worldMovers; 
     public Camera mainCamera;
+    public GameObject gameOverPanel; 
 
+    [Header("UI Skor")]
+    public TextMeshProUGUI scoreText;      // Masukkan UI Score disini
+    public TextMeshProUGUI highscoreText;  // Masukkan UI Highscore disini
+    public TextMeshProUGUI finalScoreText; 
+
+    [Header("Pengaturan Dunia")]
+    public float baseMoveSpeed = 5f;    
+    public float worldSpeedMultiplier = 1f; 
+    public float worldDirection = 1f;       
+
+    private float score;
+    private bool isGameOver = false;
 
     void Awake()
     {
@@ -19,108 +31,102 @@ public class GameEventManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    
     void Start()
     {
-        // Cari referensi otomatis jika kosong (Safety)
         if (player == null) player = FindFirstObjectByType<PlayerGravityController>();
-        if (worldMovers.Length == 0) worldMovers = FindObjectsByType<WorldMover>(FindObjectsSortMode.None);
         if (mainCamera == null) mainCamera = Camera.main;
+
+        UpdateHighscoreUI();
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
     }
 
- 
-
-    
-
-    // --- DAFTAR FUNGSI EVENT ---
-
-    // 1. EVENT: ZERO GRAVITY (Terbang Bebas)
-    public void TriggerZeroGravity(float duration)
+    void Update()
     {
-        StartCoroutine(ZeroGravityRoutine(duration));
+        if (isGameOver) return;
+
+        // LOGIKA SKOR PINDAH KESINI (Hanya dihitung 1x, jadi aman)
+        if (worldDirection > 0)
+        {
+            // Skor nambah berdasarkan kecepatan dunia saat ini
+            float currentSpeed = baseMoveSpeed * worldSpeedMultiplier;
+            score += currentSpeed * Time.deltaTime;
+        }
+
+        if (scoreText != null)
+            scoreText.text = Mathf.FloorToInt(score).ToString();
     }
 
+    // --- FUNGSI EVENT ---
+    public void TriggerZeroGravity(float duration) { StartCoroutine(ZeroGravityRoutine(duration)); }
     IEnumerator ZeroGravityRoutine(float duration)
     {
-        Debug.Log("EVENT: Zero Gravity Start!");
-        player.SetZeroGravity(true); // Panggil fungsi di script Player
-        
-        yield return new WaitForSeconds(duration); // Tunggu...
-        
-        player.SetZeroGravity(false); // Matikan
-        Debug.Log("EVENT: Zero Gravity End.");
+        player.SetZeroGravity(true);
+        yield return new WaitForSeconds(duration);
+        player.SetZeroGravity(false);
     }
 
-    // 2. EVENT: SPEED CHANGE (Cepat / Lambat)
-    public void TriggerSpeedChange(float multiplier, float duration)
-    {
-        StartCoroutine(SpeedChangeRoutine(multiplier, duration));
-    }
-
+    public void TriggerSpeedChange(float multiplier, float duration) { StartCoroutine(SpeedChangeRoutine(multiplier, duration)); }
     IEnumerator SpeedChangeRoutine(float multiplier, float duration)
     {
-        Debug.Log($"EVENT: Speed x{multiplier} Start!");
-        
-        // Ubah semua benda yang bergerak (Lantai, BG, dll)
-        foreach (var mover in worldMovers)
-        {
-            if(mover != null) mover.speedMultiplier = multiplier;
-        }
-
+        worldSpeedMultiplier = multiplier;
         yield return new WaitForSeconds(duration);
-
-        // Reset ke normal (1)
-        foreach (var mover in worldMovers)
-        {
-             if(mover != null) mover.speedMultiplier = 1f;
-        }
-        Debug.Log("EVENT: Speed Normal.");
+        worldSpeedMultiplier = 1f;
     }
 
-    // 3. EVENT: REVERSE DIRECTION (Mundur)
-    public void TriggerReverseDirection(float duration)
-    {
-        StartCoroutine(ReverseRoutine(duration));
-    }
-
+    public void TriggerReverseDirection(float duration) { StartCoroutine(ReverseRoutine(duration)); }
     IEnumerator ReverseRoutine(float duration)
     {
-        Debug.Log("EVENT: Mundur!");
-        
-        // Ubah arah gerak dunia jadi kebalikan (-1)
-        foreach (var mover in worldMovers)
-        {
-             if(mover != null) mover.direction = -1f;
-        }
-
+        worldDirection = -1f;
         yield return new WaitForSeconds(duration);
-
-        // Reset ke normal (1)
-        foreach (var mover in worldMovers)
-        {
-             if(mover != null) mover.direction = 1f;
-        }
+        worldDirection = 1f;
     }
 
-    // 4. EVENT: LAYAR TERBALIK (Screen Rotate)
-    public void TriggerScreenRotate(float duration)
-    {
-        StartCoroutine(ScreenRotateRoutine(duration));
-    }
-
+    public void TriggerScreenRotate(float duration) { StartCoroutine(ScreenRotateRoutine(duration)); }
     IEnumerator ScreenRotateRoutine(float duration)
     {
-        Debug.Log("EVENT: Pusing!");
-        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 180); // Putar 180 derajat
-
+        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 180);
         yield return new WaitForSeconds(duration);
+        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
 
-        mainCamera.transform.rotation = Quaternion.Euler(0, 0, 0); // Reset
-    }
-    
-    // 5. EVENT: FLIP GRAVITASI PAKSA
-    public void TriggerForcedFlip()
+    public void TriggerForcedFlip() { player.TriggerForcedFlip(); }
+
+    // --- GAME OVER ---
+    public void GameOver()
     {
-        player.TriggerForcedFlip();
+        if (isGameOver) return;
+        isGameOver = true;
+
+        // Simpan Highscore
+        float currentHighscore = PlayerPrefs.GetFloat("hiscore", 0);
+        if (score > currentHighscore)
+        {
+            PlayerPrefs.SetFloat("hiscore", score);
+            PlayerPrefs.Save();
+        }
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+            if (finalScoreText != null) finalScoreText.text = "Score: " + Mathf.FloorToInt(score).ToString();
+        }
+        player.gameObject.SetActive(false);
     }
+
+    void UpdateHighscoreUI()
+    {
+        if (highscoreText != null)
+            highscoreText.text = "Best: " + Mathf.FloorToInt(PlayerPrefs.GetFloat("hiscore", 0)).ToString();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void BackToMenu()
+    {
+        Time.timeScale = 1f; // Pastikan waktu normal
+        SceneManager.LoadScene("Main Menu"); // Sesuaikan nama scene menu kamu
+    }
+
 }
