@@ -1,4 +1,7 @@
+using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerGravityController : MonoBehaviour
 {
@@ -24,32 +27,33 @@ public class PlayerGravityController : MonoBehaviour
 
     // DEBUG MODE (Centang ini di Inspector untuk tes mode Zero Gravity)
     [Header("Debug Event")]
-    [SerializeField] private bool isZeroGravityMode = false; 
+    [SerializeField] private bool isZeroGravityMode = false;
+ 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
+
         // Pastikan gravitasi awal benar
         ApplyGravitySettings();
     }
 
     void Update()
     {
-        // Update gravitasi setiap saat (untuk jaga-jaga jika mode berubah di tengah game)
+        // Update gravitasi setiap saat
         if (isZeroGravityMode)
         {
-            rb.gravityScale = 0; // Pastikan gravitasi 0 saat mode Zero G
+            rb.gravityScale = 0; 
         }
         else
         {
-            // Jika Normal, set gravitasi sesuai arah (-5 atau 5)
             rb.gravityScale = isGravityInverted ? -defaultGravityScale : defaultGravityScale;
         }
 
-        // INPUT PLAYER
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        // INPUT PLAYER (Hanya Space)
+        // Menghapus Input.GetMouseButtonDown(0) agar UI tidak tembus
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             HandleInput();
         }
@@ -160,13 +164,25 @@ public class PlayerGravityController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Jika menabrak Rintangan
+        // Jika menabrak Rintangan (Paku)
         if (other.CompareTag("Obstacle"))
         {
             Debug.Log("GAME OVER! Kena Paku.");
-            // Nanti kita ganti ini dengan memanggil UI Game Over
-            // Untuk sementara, kita restart level saja:
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+
+            // Panggil fungsi GameOver di GameEventManager
+            // Ini akan memunculkan Panel dan menghentikan Skor
+            if (GameEventManager.Instance != null)
+            {
+                GameEventManager.Instance.GameOver();
+            }
+            else
+            {
+                // Jaga-jaga kalau lupa pasang GameEventManager
+                Debug.LogError("GameEventManager belum dipasang di Scene!");
+            }
+            
+            // Matikan Player (Supaya hilang dari layar)
+            gameObject.SetActive(false);
         }
     }
 }
