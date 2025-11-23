@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2064219002286871424}
   - component: {fileID: 6626344223718008220}
   - component: {fileID: 5436992080443211132}
-  m_Layer: 6
-  m_Name: Chunk Basic
+  m_Layer: 0
+  m_Name: Chunk Basic 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4643651579180433372}
   - component: {fileID: 3652007357509701746}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ExitPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9032399420604077185}
   - component: {fileID: 1014911980885377745}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5517875262180552516}
   - component: {fileID: 1916831380162903623}
   - component: {fileID: 5509221994589073526}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

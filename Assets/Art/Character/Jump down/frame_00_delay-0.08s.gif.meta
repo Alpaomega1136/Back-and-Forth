@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5eb7c2f7df89ba24ab39ef62331ffe88
+guid: e018831ec09488a47bf8212bf3adb56e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3592452312305454041
-    second: jump flip down_0
-  - first:
-      213: -3048296334736225084
-    second: jump flip down_1
+      213: -7647713668033707352
+    second: frame_00_delay-0.08s_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump flip down_0
+      name: frame_00_delay-0.08s_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 33
-        width: 162
-        height: 68
+        x: 64
+        y: 98
+        width: 151
+        height: 282
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9db4f7b2854fad130800000000000000
-      internalID: 3592452312305454041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump flip down_1
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 69
-        width: 239
-        height: 449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4cc0ce552a642b5d0800000000000000
-      internalID: -3048296334736225084
+      spriteID: 8a283f030fcddd590800000000000000
+      internalID: -7647713668033707352
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a4f8dc7df6c3cc54bad92d28c1e6f5e9
     internalID: 0
     vertices: []
     indices: 
@@ -171,10 +146,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      jump flip down_0: 3592452312305454041
-      jump flip down_1: -3048296334736225084
+      frame_00_delay-0.08s_0: -7647713668033707352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

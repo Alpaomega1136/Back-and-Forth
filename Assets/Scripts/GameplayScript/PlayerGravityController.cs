@@ -1,7 +1,4 @@
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerGravityController : MonoBehaviour
 {
@@ -9,39 +6,38 @@ public class PlayerGravityController : MonoBehaviour
     public float defaultGravityScale = 5f;
 
     [Header("Pengaturan Deteksi")]
-    public Transform groundCheckTop;    // Sensor KEPALA
-    public Transform groundCheckBottom; // Sensor KAKI
+    public Transform groundCheckTop;    // Sensor Kepala
+    public Transform groundCheckBottom; // Sensor Kaki
     public LayerMask groundLayer;       
-    public float groundCheckRadius = 0.3f; // Saya perbesar sedikit agar lebih gampang kena
+    public float groundCheckRadius = 0.3f; 
 
     // --- STATE VARIABLES ---
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private Animator anim; // Referensi ke Animator
     
-    // Status Deteksi Murni (Fakta Fisika)
-    [SerializeField] private bool touchingBottom; // Apakah kaki kena lantai?
-    [SerializeField] private bool touchingTop;    // Apakah kepala kena langit-langit?
-
-    // Status Game
+    // Status Deteksi
+    [SerializeField] private bool touchingBottom; 
+    [SerializeField] private bool touchingTop;    
+    
     [SerializeField] private bool isGravityInverted = false;
 
-    // DEBUG MODE (Centang ini di Inspector untuk tes mode Zero Gravity)
+    // DEBUG MODE (Event Zero Gravity)
     [Header("Debug Event")]
     [SerializeField] private bool isZeroGravityMode = false;
  
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>(); // Ambil komponen Animator
 
-        // Pastikan gravitasi awal benar
         ApplyGravitySettings();
     }
 
     void Update()
     {
-        // Update gravitasi setiap saat
+        // 1. Update Gravitasi (Normal / Zero G)
         if (isZeroGravityMode)
         {
             rb.gravityScale = 0; 
@@ -51,23 +47,24 @@ public class PlayerGravityController : MonoBehaviour
             rb.gravityScale = isGravityInverted ? -defaultGravityScale : defaultGravityScale;
         }
 
-        // INPUT PLAYER (Hanya Space)
-        // Menghapus Input.GetMouseButtonDown(0) agar UI tidak tembus
+        // 2. Input Player (Hanya Spasi)
         if (Input.GetKeyDown(KeyCode.Space))
         {
             HandleInput();
         }
+
+        // 3. Update Animasi (Kirim data ke Animator)
+        UpdateAnimationState();
     }
 
     void FixedUpdate()
     {
-        CheckSensors(); // Cek sensor terus menerus
+        CheckSensors(); 
         ApplyMovementCorrection();
     }
 
-    // ---------------- 1. LOGIKA DETEKSI (MURNI FISIKA) ----------------
-    // Bagian ini hanya bertugas melaporkan: "Kena atau Tidak?"
-    // Tidak ada logika game di sini.
+    // ---------------- LOGIKA UTAMA ----------------
+
     void CheckSensors()
     {
         if (groundCheckBottom != null)
@@ -77,50 +74,39 @@ public class PlayerGravityController : MonoBehaviour
             touchingTop = Physics2D.OverlapCircle(groundCheckTop.position, groundCheckRadius, groundLayer);
     }
 
-    // ---------------- 2. LOGIKA INPUT (IZIN BERGERAK) ----------------
-    // Di sini kita tentukan "Boleh Flip atau Tidak?"
     void HandleInput()
     {
-        // KONDISI 1: MODE ZERO GRAVITY (EVENT)
-        // Boleh flip kapan saja, tidak peduli sensor
+        // Saat Zero Gravity (Terbang Bebas)
         if (isZeroGravityMode)
         {
-            FlipGravityState(); // Ubah status Inverted/Normal
-            
-            // Beri dorongan karena tidak ada gravitasi
+            FlipGravityState();
+            // Dorongan kecil agar bergerak di udara
             float push = isGravityInverted ? 5f : -5f;
             rb.linearVelocity = new Vector2(0, push);
         }
-        
-        // KONDISI 2: MODE NORMAL (GRAVITASI KE BAWAH)
-        // Hanya boleh flip kalau Sensor BAWAH kena tanah
+        // Saat Normal (Harus Napak)
         else if (!isGravityInverted && touchingBottom)
         {
             FlipGravityState();
         }
-
-        // KONDISI 3: MODE TERBALIK (GRAVITASI KE ATAS)
-        // Hanya boleh flip kalau Sensor ATAS kena langit-langit
         else if (isGravityInverted && touchingTop)
         {
             FlipGravityState();
         }
     }
 
-    // Fungsi untuk membalik status dan visual
     void FlipGravityState()
     {
         isGravityInverted = !isGravityInverted;
+        rb.linearVelocity = Vector2.zero; // Reset kecepatan biar responsif
         
-        // Reset kecepatan biar langsung 'snappy'
-        rb.linearVelocity = Vector2.zero; 
-
-        // Balik Gambarnya (Visual)
+        // Balik Gambar (Visual)
         if (sr != null) sr.flipY = isGravityInverted;
     }
 
     void ApplyMovementCorrection()
     {
+        // Kunci posisi X agar player tidak maju/mundur (Dunia yang bergerak)
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
     }
 
@@ -130,11 +116,30 @@ public class PlayerGravityController : MonoBehaviour
             rb.gravityScale = isGravityInverted ? -defaultGravityScale : defaultGravityScale;
     }
 
-    // Event System Hook
+    // ---------------- LOGIKA ANIMASI (BARU) ----------------
+
+    void UpdateAnimationState()
+    {
+        if (anim == null) return;
+
+        // 1. Kirim IsGrounded
+        bool isGrounded = touchingBottom || touchingTop;
+        anim.SetBool("IsGrounded", isGrounded);
+
+        // 2. Kirim VerticalSpeed
+        float verticalSpeed = rb.linearVelocity.y * Mathf.Sign(rb.gravityScale);
+        anim.SetFloat("VerticalSpeed", verticalSpeed);
+
+        // 3. [BARU] Kirim Status Zero Gravity
+        // Supaya Animator tahu: "Oh, ini lagi mode terbang, boleh naik turun bebas"
+        anim.SetBool("IsZeroGravity", isZeroGravityMode);
+    }
+
+    // ---------------- EVENT SYSTEM HOOKS ----------------
+
     public void SetZeroGravity(bool active)
     {
         isZeroGravityMode = active;
-        // Reset velocity saat masuk/keluar mode supaya tidak 'terlempar' sisa momentum
         rb.linearVelocity = Vector2.zero; 
     }
 
@@ -143,46 +148,51 @@ public class PlayerGravityController : MonoBehaviour
         FlipGravityState();
     }
 
-    // Visualisasi Debug (Biru = Atas, Merah = Bawah)
-    // Jika Bola penuh (Solid) artinya KENA. Jika cuma Garis (Wire) artinya TIDAK KENA.
+    // ---------------- GAME OVER LOGIC ----------------
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // 1. Kena Rintangan (Paku/Tembok)
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("GAME OVER! Kena Obstacle.");
+            CallGameOver();
+        }
+        // 2. Jatuh Keluar Layar (DeathZone)
+        else if (other.CompareTag("DeathZone"))
+        {
+            Debug.Log("GAME OVER! Jatuh Keluar Layar.");
+            CallGameOver();
+        }
+    }
+
+    void CallGameOver()
+    {
+        // Panggil Manager untuk tampilkan Panel & Hentikan Waktu
+        if (GameEventManager.Instance != null)
+        {
+            GameEventManager.Instance.GameOver();
+        }
+        
+        // Sembunyikan Player
+        gameObject.SetActive(false);
+    }
+
+    // ---------------- DEBUGGING ----------------
     void OnDrawGizmos()
     {
         if (groundCheckBottom != null)
         {
             Gizmos.color = Color.red;
-            if (touchingBottom) Gizmos.DrawSphere(groundCheckBottom.position, groundCheckRadius); // Kena
-            else Gizmos.DrawWireSphere(groundCheckBottom.position, groundCheckRadius); // Tidak Kena
+            if (touchingBottom) Gizmos.DrawSphere(groundCheckBottom.position, groundCheckRadius);
+            else Gizmos.DrawWireSphere(groundCheckBottom.position, groundCheckRadius);
         }
 
         if (groundCheckTop != null)
         {
             Gizmos.color = Color.blue;
-            if (touchingTop) Gizmos.DrawSphere(groundCheckTop.position, groundCheckRadius); // Kena
-            else Gizmos.DrawWireSphere(groundCheckTop.position, groundCheckRadius); // Tidak Kena
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        // Jika menabrak Rintangan (Paku)
-        if (other.CompareTag("Obstacle"))
-        {
-            Debug.Log("GAME OVER! Kena Paku.");
-
-            // Panggil fungsi GameOver di GameEventManager
-            // Ini akan memunculkan Panel dan menghentikan Skor
-            if (GameEventManager.Instance != null)
-            {
-                GameEventManager.Instance.GameOver();
-            }
-            else
-            {
-                // Jaga-jaga kalau lupa pasang GameEventManager
-                Debug.LogError("GameEventManager belum dipasang di Scene!");
-            }
-            
-            // Matikan Player (Supaya hilang dari layar)
-            gameObject.SetActive(false);
+            if (touchingTop) Gizmos.DrawSphere(groundCheckTop.position, groundCheckRadius);
+            else Gizmos.DrawWireSphere(groundCheckTop.position, groundCheckRadius);
         }
     }
 }
