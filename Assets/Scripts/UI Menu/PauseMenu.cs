@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true); // Munculkan menu
         Time.timeScale = 0f;         // Waktu beku
+        BGMManager.Instance.PauseMusic();
         isPaused = true;
     }
 
@@ -36,6 +37,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false); // Sembunyikan menu
         Time.timeScale = 1f;          // Waktu jalan
+        BGMManager.Instance.ResumeMusic();
         isPaused = false;
     }
 
@@ -47,7 +49,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Retry()
     {
+        BGMManager.Instance.StopMusic();
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BGMManager.Instance.PlayMusic();
     }
 }

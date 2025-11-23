@@ -97,6 +97,9 @@ public class GameEventManager : MonoBehaviour
         if (isGameOver) return;
         isGameOver = true;
 
+        // Stop music
+        BGMManager.Instance.StopMusic();
+
         // Simpan Highscore
         float currentHighscore = PlayerPrefs.GetFloat("hiscore", 0);
         if (score > currentHighscore)
@@ -121,10 +124,13 @@ public class GameEventManager : MonoBehaviour
 
     public void RestartGame()
     {
+        BGMManager.Instance.StopMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BGMManager.Instance.PlayMusic();
     }
     public void BackToMenu()
     {
+        BGMManager.Instance.StopMusic();
         Time.timeScale = 1f; // Pastikan waktu normal
         SceneManager.LoadScene("Main Menu"); // Sesuaikan nama scene menu kamu
     }
