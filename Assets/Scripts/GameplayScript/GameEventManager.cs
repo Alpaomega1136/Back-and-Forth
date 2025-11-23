@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using TMPro; // Untuk UI Text
-using UnityEngine.SceneManagement; 
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameEventManager : MonoBehaviour
 {
@@ -10,20 +10,22 @@ public class GameEventManager : MonoBehaviour
     [Header("Referensi Utama")]
     public PlayerGravityController player;
     public Camera mainCamera;
-    public GameObject gameOverPanel; 
+    public GameObject gameOverPanel;
 
     [Header("UI Skor")]
-    public TextMeshProUGUI scoreText;      // Masukkan UI Score disini
-    public TextMeshProUGUI highscoreText;  // Masukkan UI Highscore disini
-    public TextMeshProUGUI finalScoreText; 
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highscoreText;
+    public TextMeshProUGUI finalScoreText;
 
     [Header("Pengaturan Dunia")]
-    public float baseMoveSpeed = 5f;    
-    public float worldSpeedMultiplier = 1f; 
-    public float worldDirection = 1f;       
+    public float baseMoveSpeed = 5f;
+    public float worldSpeedMultiplier = 1f;
+    public float worldDirection = 1f;
 
     private float score;
-    private bool isGameOver = false;
+    
+    // UBAH JADI PUBLIC (Supaya PauseMenu bisa baca)
+    public bool isGameOver = false; 
 
     void Awake()
     {
@@ -38,16 +40,18 @@ public class GameEventManager : MonoBehaviour
 
         UpdateHighscoreUI();
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        
+        // Pastikan waktu berjalan normal saat game mulai
+        Time.timeScale = 1f;
+        isGameOver = false;
     }
 
     void Update()
     {
         if (isGameOver) return;
 
-        // LOGIKA SKOR PINDAH KESINI (Hanya dihitung 1x, jadi aman)
         if (worldDirection > 0)
         {
-            // Skor nambah berdasarkan kecepatan dunia saat ini
             float currentSpeed = baseMoveSpeed * worldSpeedMultiplier;
             score += currentSpeed * Time.deltaTime;
         }
@@ -91,12 +95,18 @@ public class GameEventManager : MonoBehaviour
 
     public void TriggerForcedFlip() { player.TriggerForcedFlip(); }
 
-    // --- GAME OVER ---
+    // --- PERBAIKAN LOGIKA GAME OVER ---
     public void GameOver()
     {
         if (isGameOver) return;
         isGameOver = true;
 
+        Debug.Log("Game Over: Time Stopped");
+
+        // 1. HENTIKAN WAKTU (Ini yang bikin lantai berhenti gerak)
+        Time.timeScale = 0f; 
+
+        // 2. Simpan Highscore
         // Stop music
         BGMManager.Instance.StopMusic();
 
@@ -108,12 +118,15 @@ public class GameEventManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
+        // 3. Tampilkan Panel
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
             if (finalScoreText != null) finalScoreText.text = "Score: " + Mathf.FloorToInt(score).ToString();
         }
-        player.gameObject.SetActive(false);
+        
+        // 4. Matikan Player
+        if (player != null) player.gameObject.SetActive(false);
     }
 
     void UpdateHighscoreUI()
@@ -122,17 +135,22 @@ public class GameEventManager : MonoBehaviour
             highscoreText.text = "Best: " + Mathf.FloorToInt(PlayerPrefs.GetFloat("hiscore", 0)).ToString();
     }
 
+    // Tombol Retry
     public void RestartGame()
     {
+        Time.timeScale = 1f; // Kembalikan waktu normal sebelum reload
         BGMManager.Instance.StopMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         BGMManager.Instance.PlayMusic();
     }
+
+    // Tombol Menu
     public void BackToMenu()
     {
+        Time.timeScale = 1f; // Kembalikan waktu normal sebelum pindah
+        SceneManager.LoadScene("Main Menu");
         BGMManager.Instance.StopMusic();
         Time.timeScale = 1f; // Pastikan waktu normal
         SceneManager.LoadScene("Main Menu"); // Sesuaikan nama scene menu kamu
     }
-
 }
