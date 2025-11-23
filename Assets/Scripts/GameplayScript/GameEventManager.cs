@@ -107,6 +107,10 @@ public class GameEventManager : MonoBehaviour
         Time.timeScale = 0f; 
 
         // 2. Simpan Highscore
+        // Stop music
+        BGMManager.Instance.StopMusic();
+
+        // Simpan Highscore
         float currentHighscore = PlayerPrefs.GetFloat("hiscore", 0);
         if (score > currentHighscore)
         {
@@ -135,7 +139,9 @@ public class GameEventManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f; // Kembalikan waktu normal sebelum reload
+        BGMManager.Instance.StopMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BGMManager.Instance.PlayMusic();
     }
 
     // Tombol Menu
@@ -143,5 +149,8 @@ public class GameEventManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Kembalikan waktu normal sebelum pindah
         SceneManager.LoadScene("Main Menu");
+        BGMManager.Instance.StopMusic();
+        Time.timeScale = 1f; // Pastikan waktu normal
+        SceneManager.LoadScene("Main Menu"); // Sesuaikan nama scene menu kamu
     }
 }
