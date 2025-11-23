@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: b19cfc1091260f44882af87f28275cf0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2306265744369240973
+    second: tilemap platform moving wall spike_0
+  - first:
+      213: 184303450594723512
+    second: tilemap platform moving wall spike_1
+  - first:
+      213: -5830424039726120533
+    second: tilemap platform moving wall spike_2
+  - first:
+      213: -8867522791459197483
+    second: tilemap platform moving wall spike_3
+  - first:
+      213: -9053259155034619407
+    second: tilemap platform moving wall spike_4
+  - first:
+      213: -7527078013114397298
+    second: tilemap platform moving wall spike_5
+  - first:
+      213: -2173207709957078807
+    second: tilemap platform moving wall spike_6
+  - first:
+      213: -3868812301393660663
+    second: tilemap platform moving wall spike_7
+  - first:
+      213: -623013379599477372
+    second: tilemap platform moving wall spike_8
+  - first:
+      213: 7051709733482141722
+    second: tilemap platform moving wall spike_9
+  - first:
+      213: -3303352447147869448
+    second: tilemap platform moving wall spike_10
+  - first:
+      213: 3308728682386168090
+    second: tilemap platform moving wall spike_11
+  - first:
+      213: 5088432930434678502
+    second: tilemap platform moving wall spike_12
+  - first:
+      213: 7522187704977741280
+    second: tilemap platform moving wall spike_13
+  - first:
+      213: -3947550933876729488
+    second: tilemap platform moving wall spike_14
+  - first:
+      213: -8271665924119952495
+    second: tilemap platform moving wall spike_15
+  - first:
+      213: -6464099709730374374
+    second: tilemap platform moving wall spike_16
+  - first:
+      213: 8709708671019335950
+    second: tilemap platform moving wall spike_17
+  - first:
+      213: 4835394315194981452
+    second: tilemap platform moving wall spike_18
+  - first:
+      213: 8778723995528042793
+    second: tilemap platform moving wall spike_19
+  - first:
+      213: 5294584055442635901
+    second: tilemap platform moving wall spike_20
+  - first:
+      213: -5610045448974603191
+    second: tilemap platform moving wall spike_21
+  - first:
+      213: -7841419561976711137
+    second: tilemap platform moving wall spike_22
+  - first:
+      213: 541881763455032619
+    second: tilemap platform moving wall spike_23
+  - first:
+      213: 7189864262952858312
+    second: tilemap platform moving wall spike_24
+  - first:
+      213: -4729474483224476260
+    second: tilemap platform moving wall spike_25
+  - first:
+      213: 1884236137160595516
+    second: tilemap platform moving wall spike_26
+  - first:
+      213: -8919822920110158281
+    second: tilemap platform moving wall spike_27
+  - first:
+      213: 733686513788404142
+    second: tilemap platform moving wall spike_28
+  - first:
+      213: -6476375560869653519
+    second: tilemap platform moving wall spike_29
+  - first:
+      213: -1505547532804163511
+    second: tilemap platform moving wall spike_30
+  - first:
+      213: 445887795930969713
+    second: tilemap platform moving wall spike_31
+  - first:
+      213: 1977290349064207515
+    second: tilemap platform moving wall spike_32
+  - first:
+      213: 4514579788328596830
+    second: tilemap platform moving wall spike_33
+  - first:
+      213: -2846696005243254215
+    second: tilemap platform moving wall spike_34
+  - first:
+      213: -4529137965995848537
+    second: tilemap platform moving wall spike_35
+  - first:
+      213: 4358237893215417903
+    second: tilemap platform moving wall spike_36
+  - first:
+      213: -3134224379921099043
+    second: tilemap platform moving wall spike_37
+  - first:
+      213: 4078092786984864638
+    second: tilemap platform moving wall spike_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374383d468f7effd0800000000000000
+      internalID: -2306265744369240973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6c3970307ce8200800000000000000
+      internalID: 184303450594723512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba10a3e0a3c261fa0800000000000000
+      internalID: -5830424039726120533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dde469d00b30f480800000000000000
+      internalID: -8867522791459197483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_4
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1cb94c3cc5c5280800000000000000
+      internalID: -9053259155034619407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dc9af5d627a8790800000000000000
+      internalID: -7527078013114397298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e04ed81a1737d1e0800000000000000
+      internalID: -2173207709957078807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_7
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 865
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905f4c0b5b73f4ac0800000000000000
+      internalID: -3868812301393660663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48558a2d1ac9a57f0800000000000000
+      internalID: -623013379599477372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a181e5b14a4bcd160800000000000000
+      internalID: 7051709733482141722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa75d383722822d0800000000000000
+      internalID: -3303352447147869448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_11
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1916cbc437faed20800000000000000
+      internalID: 3308728682386168090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_12
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee75f16acebd9640800000000000000
+      internalID: 5088432930434678502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_13
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 777
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e552090ddd246860800000000000000
+      internalID: 7522187704977741280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_14
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0791485375b7739c0800000000000000
+      internalID: -3947550933876729488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_15
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 193802ccaa3253d80800000000000000
+      internalID: -8271665924119952495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1db0d0ff87ea46a0800000000000000
+      internalID: -6464099709730374374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e014f39e3e91fd870800000000000000
+      internalID: 8709708671019335950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_18
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cd32ab285ca1340800000000000000
+      internalID: 4835394315194981452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_19
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92995a656fa44d970800000000000000
+      internalID: 8778723995528042793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_20
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cfa1285242a7940800000000000000
+      internalID: 5294584055442635901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_21
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 689
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c6210336d1522b0800000000000000
+      internalID: -5610045448974603191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 550
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f183499347ead2390800000000000000
+      internalID: -7841419561976711137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_23
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 549
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ddff4c796258700800000000000000
+      internalID: 541881763455032619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_24
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 566
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2b490247787c360800000000000000
+      internalID: 7189864262952858312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_25
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 566
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95812de3088d5eb0800000000000000
+      internalID: -4729474483224476260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_26
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 590
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38596c98c6262a10800000000000000
+      internalID: 1884236137160595516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_27
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 589
+        width: 66
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e427b305c663480800000000000000
+      internalID: -8919822920110158281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_28
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 590
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea14ade3ff39e2a00800000000000000
+      internalID: 733686513788404142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_29
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 443
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3d75e9dba4f16a0800000000000000
+      internalID: -6476375560869653519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_30
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 443
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948fdb2ee783b1be0800000000000000
+      internalID: -1505547532804163511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_31
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 475
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176b526869c103600800000000000000
+      internalID: 445887795930969713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_32
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 475
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cb7c9a81fb07b10800000000000000
+      internalID: 1977290349064207515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_33
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 497
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55fb71f56207ae30800000000000000
+      internalID: 4514579788328596830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_34
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 497
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ac3ffc0118e78d0800000000000000
+      internalID: -2846696005243254215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_35
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 420
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac051e24054521c0800000000000000
+      internalID: -4529137965995848537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_36
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 420
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2670cfd5429b7c30800000000000000
+      internalID: 4358237893215417903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_37
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 410
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd61f64488ff084d0800000000000000
+      internalID: -3134224379921099043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap platform moving wall spike_38
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 410
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7bc05978cb489830800000000000000
+      internalID: 4078092786984864638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tilemap platform moving wall spike_0: -2306265744369240973
+      tilemap platform moving wall spike_1: 184303450594723512
+      tilemap platform moving wall spike_10: -3303352447147869448
+      tilemap platform moving wall spike_11: 3308728682386168090
+      tilemap platform moving wall spike_12: 5088432930434678502
+      tilemap platform moving wall spike_13: 7522187704977741280
+      tilemap platform moving wall spike_14: -3947550933876729488
+      tilemap platform moving wall spike_15: -8271665924119952495
+      tilemap platform moving wall spike_16: -6464099709730374374
+      tilemap platform moving wall spike_17: 8709708671019335950
+      tilemap platform moving wall spike_18: 4835394315194981452
+      tilemap platform moving wall spike_19: 8778723995528042793
+      tilemap platform moving wall spike_2: -5830424039726120533
+      tilemap platform moving wall spike_20: 5294584055442635901
+      tilemap platform moving wall spike_21: -5610045448974603191
+      tilemap platform moving wall spike_22: -7841419561976711137
+      tilemap platform moving wall spike_23: 541881763455032619
+      tilemap platform moving wall spike_24: 7189864262952858312
+      tilemap platform moving wall spike_25: -4729474483224476260
+      tilemap platform moving wall spike_26: 1884236137160595516
+      tilemap platform moving wall spike_27: -8919822920110158281
+      tilemap platform moving wall spike_28: 733686513788404142
+      tilemap platform moving wall spike_29: -6476375560869653519
+      tilemap platform moving wall spike_3: -8867522791459197483
+      tilemap platform moving wall spike_30: -1505547532804163511
+      tilemap platform moving wall spike_31: 445887795930969713
+      tilemap platform moving wall spike_32: 1977290349064207515
+      tilemap platform moving wall spike_33: 4514579788328596830
+      tilemap platform moving wall spike_34: -2846696005243254215
+      tilemap platform moving wall spike_35: -4529137965995848537
+      tilemap platform moving wall spike_36: 4358237893215417903
+      tilemap platform moving wall spike_37: -3134224379921099043
+      tilemap platform moving wall spike_38: 4078092786984864638
+      tilemap platform moving wall spike_4: -9053259155034619407
+      tilemap platform moving wall spike_5: -7527078013114397298
+      tilemap platform moving wall spike_6: -2173207709957078807
+      tilemap platform moving wall spike_7: -3868812301393660663
+      tilemap platform moving wall spike_8: -623013379599477372
+      tilemap platform moving wall spike_9: 7051709733482141722
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
