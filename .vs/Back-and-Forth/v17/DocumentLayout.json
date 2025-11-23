@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Back-and-Forth\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|D:\\Back-and-Forth\\assets\\scripts\\gameplayscript\\playergravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplayscript\\playergravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|d:\\back-and-forth\\assets\\scripts\\gameplayscript\\worldmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplayscript\\worldmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|d:\\back-and-forth\\assets\\scripts\\gameplayscript\\gameeventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|D:\\Back-and-Forth\\assets\\scripts\\gameplayscript\\gameeventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplayscript\\gameeventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|d:\\back-and-forth\\assets\\scripts\\gameplayscript\\playergravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF65CF42-6F36-F3CE-AF32-AE6175F90229}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplayscript\\playergravitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,37 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WorldMover.cs",
               "DocumentMoniker": "D:\\Back-and-Forth\\Assets\\Scripts\\GameplayScript\\WorldMover.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameplayScript\\WorldMover.cs",
               "ToolTip": "D:\\Back-and-Forth\\Assets\\Scripts\\GameplayScript\\WorldMover.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameplayScript\\WorldMover.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T02:34:52.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerGravityController.cs",
               "DocumentMoniker": "D:\\Back-and-Forth\\Assets\\Scripts\\GameplayScript\\PlayerGravityController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameplayScript\\PlayerGravityController.cs",
               "ToolTip": "D:\\Back-and-Forth\\Assets\\Scripts\\GameplayScript\\PlayerGravityController.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameplayScript\\PlayerGravityController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCkAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwCkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T12:57:44.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameEventManager.cs",
               "DocumentMoniker": "D:\\Back-and-Forth\\Assets\\Scripts\\GameplayScript\\GameEventManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameplayScript\\GameEventManager.cs",
@@ -60,8 +60,7 @@
               "RelativeToolTip": "Assets\\Scripts\\GameplayScript\\GameEventManager.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAkwAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T12:53:58.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T12:53:58.383Z"
             }
           ]
         }

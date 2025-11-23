@@ -182,7 +182,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3035639871090223352, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
     - {fileID: 724046754573103456, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7502550638007039819, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
@@ -539,13 +540,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk Basic (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1176219544440030668, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.14
+      objectReference: {fileID: 0}
     - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.078947365
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.078947365
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2665,7 +2670,7 @@ Transform:
   m_GameObject: {fileID: 1986979703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -959.93, y: -539.87, z: 0}
+  m_LocalPosition: {x: -960.06, y: -539.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2777,7 +2782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkGenerator
   chunkPrefabs:
-  - {fileID: 68793013335832117, guid: 03e0a2ab98038bf4a9f6c4e2ec64ec07, type: 3}
+  - {fileID: 68793013335832117, guid: 063e59f6624802347b4ae567f215b635, type: 3}
   startPoint: {fileID: 680697557}
   spawnAdjustmentX: 9.8
   spawnTriggerX: 28
@@ -2859,7 +2864,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3035639871090223352, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
     - {fileID: 724046754573103456, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7502550638007039819, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
