@@ -117,6 +117,8 @@ public class PlayerGravityController : MonoBehaviour
 
         // Balik Gambarnya (Visual)
         if (sr != null) sr.flipY = isGravityInverted;
+
+        SoundManager.Instance.PlayGravityChangeSFX();
     }
 
     void ApplyMovementCorrection()
@@ -173,6 +175,7 @@ public class PlayerGravityController : MonoBehaviour
             // Ini akan memunculkan Panel dan menghentikan Skor
             if (GameEventManager.Instance != null)
             {
+                SoundManager.Instance.PlaySFX(SoundManager.Instance.collision);
                 GameEventManager.Instance.GameOver();
             }
             else
