@@ -151,7 +151,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -165,7 +165,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 57
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -189,7 +189,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -230,10 +230,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 865
-        width: 66
-        height: 66
+        x: 91
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_1
       rect:
         serializedVersion: 2
-        x: 177
-        y: 865
-        width: 66
-        height: 66
+        x: 178
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_2
       rect:
         serializedVersion: 2
-        x: 264
-        y: 865
-        width: 66
-        height: 66
+        x: 265
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_3
       rect:
         serializedVersion: 2
-        x: 438
-        y: 865
-        width: 66
-        height: 66
+        x: 439
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_4
       rect:
         serializedVersion: 2
-        x: 530
-        y: 865
-        width: 66
-        height: 66
+        x: 531
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_5
       rect:
         serializedVersion: 2
-        x: 621
-        y: 865
-        width: 66
-        height: 66
+        x: 622
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_6
       rect:
         serializedVersion: 2
-        x: 795
-        y: 865
-        width: 66
-        height: 66
+        x: 796
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_7
       rect:
         serializedVersion: 2
-        x: 943
-        y: 865
-        width: 66
-        height: 66
+        x: 944
+        y: 866
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_8
       rect:
         serializedVersion: 2
-        x: 90
-        y: 777
-        width: 66
-        height: 66
+        x: 91
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_9
       rect:
         serializedVersion: 2
-        x: 264
-        y: 777
-        width: 66
-        height: 66
+        x: 265
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_10
       rect:
         serializedVersion: 2
-        x: 438
-        y: 777
-        width: 66
-        height: 66
+        x: 439
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_11
       rect:
         serializedVersion: 2
-        x: 621
-        y: 777
-        width: 66
-        height: 66
+        x: 622
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,10 +494,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_12
       rect:
         serializedVersion: 2
-        x: 795
-        y: 777
-        width: 66
-        height: 66
+        x: 796
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_13
       rect:
         serializedVersion: 2
-        x: 943
-        y: 777
-        width: 66
-        height: 66
+        x: 944
+        y: 778
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +538,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_14
       rect:
         serializedVersion: 2
-        x: 90
-        y: 689
-        width: 66
-        height: 66
+        x: 91
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,10 +560,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_15
       rect:
         serializedVersion: 2
-        x: 177
-        y: 689
-        width: 66
-        height: 66
+        x: 178
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,10 +582,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_16
       rect:
         serializedVersion: 2
-        x: 264
-        y: 689
-        width: 66
-        height: 66
+        x: 265
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_17
       rect:
         serializedVersion: 2
-        x: 438
-        y: 689
-        width: 66
-        height: 66
+        x: 439
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -626,10 +626,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_18
       rect:
         serializedVersion: 2
-        x: 525
-        y: 689
-        width: 66
-        height: 66
+        x: 526
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,10 +648,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_19
       rect:
         serializedVersion: 2
-        x: 621
-        y: 689
-        width: 66
-        height: 66
+        x: 622
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,10 +670,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_20
       rect:
         serializedVersion: 2
-        x: 795
-        y: 689
-        width: 66
-        height: 66
+        x: 796
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -692,10 +692,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_21
       rect:
         serializedVersion: 2
-        x: 943
-        y: 689
-        width: 66
-        height: 66
+        x: 944
+        y: 690
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_22
       rect:
         serializedVersion: 2
-        x: 90
-        y: 550
-        width: 66
-        height: 66
+        x: 91
+        y: 551
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -736,10 +736,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_23
       rect:
         serializedVersion: 2
-        x: 176
-        y: 549
-        width: 68
-        height: 68
+        x: 177
+        y: 550
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -758,10 +758,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_24
       rect:
         serializedVersion: 2
-        x: 438
-        y: 566
-        width: 66
-        height: 66
+        x: 439
+        y: 567
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,10 +780,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_25
       rect:
         serializedVersion: 2
-        x: 530
-        y: 566
-        width: 66
-        height: 66
+        x: 531
+        y: 567
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -802,10 +802,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_26
       rect:
         serializedVersion: 2
-        x: 734
-        y: 590
-        width: 47
-        height: 15
+        x: 735
+        y: 591
+        width: 45
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,10 +824,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_27
       rect:
         serializedVersion: 2
-        x: 804
-        y: 589
-        width: 66
-        height: 15
+        x: 805
+        y: 590
+        width: 64
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,10 +846,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_28
       rect:
         serializedVersion: 2
-        x: 900
-        y: 590
-        width: 48
-        height: 15
+        x: 901
+        y: 591
+        width: 46
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -868,10 +868,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_29
       rect:
         serializedVersion: 2
-        x: 90
-        y: 443
-        width: 66
-        height: 66
+        x: 91
+        y: 444
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -890,10 +890,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_30
       rect:
         serializedVersion: 2
-        x: 178
-        y: 443
-        width: 66
-        height: 66
+        x: 179
+        y: 444
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,10 +912,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_31
       rect:
         serializedVersion: 2
-        x: 437
-        y: 475
-        width: 66
-        height: 66
+        x: 438
+        y: 476
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,10 +934,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_32
       rect:
         serializedVersion: 2
-        x: 530
-        y: 475
-        width: 66
-        height: 66
+        x: 531
+        y: 476
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -956,10 +956,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_33
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 497
-        width: 66
-        height: 66
+        x: 1033
+        y: 498
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -978,10 +978,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_34
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 497
-        width: 66
-        height: 66
+        x: 1153
+        y: 498
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1000,10 +1000,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_35
       rect:
         serializedVersion: 2
-        x: 740
-        y: 420
-        width: 66
-        height: 46
+        x: 741
+        y: 421
+        width: 64
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,10 +1022,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_36
       rect:
         serializedVersion: 2
-        x: 836
-        y: 420
-        width: 66
-        height: 46
+        x: 837
+        y: 421
+        width: 64
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1044,10 +1044,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_37
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 410
-        width: 66
-        height: 66
+        x: 1033
+        y: 411
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,10 +1066,10 @@ TextureImporter:
       name: tilemap platform moving wall spike_38
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 410
-        width: 66
-        height: 66
+        x: 1153
+        y: 411
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1088,7 +1088,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4f8a34030a735e24aae3f35b9aa72faf
     internalID: 0
     vertices: []
     indices: 
@@ -1096,7 +1096,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: True
     nameFileIdTable:
       tilemap platform moving wall spike_0: -2306265744369240973
       tilemap platform moving wall spike_1: 184303450594723512

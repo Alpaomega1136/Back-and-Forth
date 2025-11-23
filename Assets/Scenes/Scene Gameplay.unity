@@ -131,13 +131,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk Basic (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.26011
+      value: 12.88
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69557
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -315,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 96992740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.05, y: -3.79, z: 0}
+  m_LocalPosition: {x: -7.05, y: -3.33, z: 0}
   m_LocalScale: {x: 0.5868, y: 0.449, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -531,13 +539,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk Basic (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.078947365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.078947365
+      objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.910109
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69557
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2404,8 +2420,8 @@ Transform:
   m_GameObject: {fileID: 1498607102}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -942.31, y: -540.07, z: 0}
-  m_LocalScale: {x: 0.9173615, y: 0.8992225, z: 1}
+  m_LocalPosition: {x: -940.79, y: -539.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 534438007}
@@ -2422,7 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2639c4e5dac025b41adb9a5024acac7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  parallaxFactor: 0.04
+  parallaxFactor: 0
 --- !u!212 &1498607105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2470,7 +2486,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: -7597627822328504098, guid: 519d9b333408f604f8409b0a605a6c2f, type: 3}
+  m_Sprite: {fileID: -6933681108484476644, guid: 31dfc73f596a9214bafab24f0064253c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2649,8 +2665,8 @@ Transform:
   m_GameObject: {fileID: 1986979703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960.068, y: -539.9094, z: 0}
-  m_LocalScale: {x: 0.9173615, y: 0.8992225, z: 1}
+  m_LocalPosition: {x: -959.93, y: -539.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 534438007}
@@ -2667,7 +2683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2639c4e5dac025b41adb9a5024acac7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  parallaxFactor: 0.04
+  parallaxFactor: 0
 --- !u!212 &1986979706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2774,7 +2790,7 @@ Transform:
   m_GameObject: {fileID: 2097066177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1974001, y: -2.32663, z: 0}
+  m_LocalPosition: {x: 0.1974001, y: -1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2792,13 +2808,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chunk Basic
       objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916831380162903623, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.2198896
+      value: -5.22
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69557
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2064219002286871424, guid: 68de7a2bbcb7951439129772785fffa6, type: 3}
       propertyPath: m_LocalPosition.z
