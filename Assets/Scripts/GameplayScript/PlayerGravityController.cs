@@ -102,6 +102,7 @@ public class PlayerGravityController : MonoBehaviour
         
         // Balik Gambar (Visual)
         if (sr != null) sr.flipY = isGravityInverted;
+        SoundManager.Instance?.PlayGravitySFX();
     }
 
     void ApplyMovementCorrection()
@@ -181,6 +182,9 @@ public class PlayerGravityController : MonoBehaviour
             // Backup jika lupa pasang Manager (Restart Scene)
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
+        
+        // Semua alasan game over, plau collision
+        SoundManager.Instance?.PlaySFX(SoundManager.Instance.collision);
         
         // Sembunyikan Player
         gameObject.SetActive(false);
