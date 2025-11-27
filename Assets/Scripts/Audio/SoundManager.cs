@@ -10,17 +10,18 @@ public class SoundManager : MonoBehaviour
 
     private int lastPlayedGravityClip = -1;
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep between scenes
-        }
-        else
+        if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        float sfx   = PlayerPrefs.GetFloat("SFXVolume",   1f);
+        SetSFXVolume(sfx);
     }
 
     public void PlaySFX(AudioClip clip)
@@ -48,5 +49,10 @@ public class SoundManager : MonoBehaviour
                 PlaySFX(gravity3);
                 break;
         }
+    }
+
+    public void SetSFXVolume(float value)
+    {
+        sfxSource.volume = value;
     }
 }

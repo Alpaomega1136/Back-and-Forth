@@ -7,17 +7,19 @@ public class BGMManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip gameMusic;
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
+        if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        // Load saved volumes on startup
+        float music = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        SetMusicVolume(music);
     }
 
     void Start()
@@ -58,5 +60,10 @@ public class BGMManager : MonoBehaviour
     {
         if (audioSource.isPlaying || audioSource.time > 0f)
             audioSource.Stop(); // Stop() resets playback position to 0
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        audioSource.volume = value;
     }
 }
