@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        BGMManager.Instance?.PauseMusic();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        BGMManager.Instance?.ResumeMusic();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -49,13 +51,16 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
+        BGMManager.Instance?.StopMusic();
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
     }
 
     public void Retry()
     {
+        BGMManager.Instance?.StopMusic();
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BGMManager.Instance?.PlayMusic();
     }
 }

@@ -103,6 +103,9 @@ public class GameEventManager : MonoBehaviour
 
         Debug.Log("Game Over: Time Stopped");
 
+        // 0. Stop music
+        BGMManager.Instance?.StopMusic();
+
         // 1. HENTIKAN WAKTU (Ini yang bikin lantai berhenti gerak)
         Time.timeScale = 0f; 
 
@@ -134,13 +137,16 @@ public class GameEventManager : MonoBehaviour
     // Tombol Retry
     public void RestartGame()
     {
+        BGMManager.Instance?.StopMusic();
         Time.timeScale = 1f; // Kembalikan waktu normal sebelum reload
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        BGMManager.Instance?.PlayMusic();
     }
 
     // Tombol Menu
     public void BackToMenu()
     {
+        BGMManager.Instance?.StopMusic();
         Time.timeScale = 1f; // Kembalikan waktu normal sebelum pindah
         SceneManager.LoadScene("Main Menu");
     }
