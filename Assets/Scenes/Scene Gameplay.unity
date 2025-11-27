@@ -3413,6 +3413,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChunkGenerator
   chunkPrefabs:
   - {fileID: 68793013335832117, guid: 5c1254735198d184bbb2e7af5ec043a6, type: 3}
+  eventChunkPrefabs:
+  - {fileID: 1966715938824167806, guid: 2cd613fb97d8d955792cd3977ec68016, type: 3}
+  - {fileID: 4464949853457247865, guid: 74c157a1a24c981edad767d0da79ed92, type: 3}
+  eventItems:
+  - {fileID: 2571439009417857799, guid: 1ec2692eafc10eb46a445f6f29ebe6db, type: 3}
+  - {fileID: 2571439009417857799, guid: 821893aeed3be8f48a4b51f764ed397e, type: 3}
+  - {fileID: 2571439009417857799, guid: 4675c25a9e9d4404bbcb0e7073901fbb, type: 3}
+  eventItemSpawnPoint: {fileID: 0}
   startPoint: {fileID: 680697557}
   spawnAdjustmentX: 0
   spawnTriggerX: 28
