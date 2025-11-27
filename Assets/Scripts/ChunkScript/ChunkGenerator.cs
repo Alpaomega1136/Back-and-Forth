@@ -58,35 +58,56 @@ public class ChunkGenerator : MonoBehaviour
             prefabToSpawn = eventChunkPrefabs[Random.Range(0, eventChunkPrefabs.Count)];
         }
 
-        // --- BAGIAN PENGATUR JARAK ---
+        // Spawn chunk di posisi sementara untuk mengukur offset entry point
+        GameObject newChunk = Instantiate(prefabToSpawn, Vector3.zero, Quaternion.identity);
         
-        // 1. Ambil posisi X dari Ekor Terakhir + OFFSET MANUAL
-        // Tambahkan 'spawnAdjustmentX' untuk mendorong chunk baru lebih ke kanan
-        float spawnX = currentExitPoint.position.x + spawnAdjustmentX;
+        // Cari entry point di chunk baru
+        ChunkEntryPoint entryPoint = newChunk.GetComponentInChildren<ChunkEntryPoint>();
+        
+        if (entryPoint == null)
+        {
+            Debug.LogError($"AWAS: Prefab '{prefabToSpawn.name}' tidak punya ChunkEntryPoint! Gunakan posisi chunk sebagai gantinya.");
+            // Fallback: gunakan posisi chunk itu sendiri
+            Vector3 fallbackPos = new Vector3(
+                currentExitPoint.position.x + spawnAdjustmentX,
+                startPoint.position.y,
+                0
+            );
+            newChunk.transform.position = fallbackPos;
+        }
+        else
+        {
+            // Hitung offset antara entry point dan pivot chunk
+            Vector3 entryOffset = entryPoint.transform.position - newChunk.transform.position;
+            
+            // Posisi akhir: exit point sebelumnya - offset entry point + spacing
+            Vector3 finalSpawnPos = new Vector3(
+                currentExitPoint.position.x - entryOffset.x + spawnAdjustmentX,
+                startPoint.position.y - entryOffset.y,
+                0
+            );
+            
+            newChunk.transform.position = finalSpawnPos;
+        }
 
-        // 2. Ambil posisi Y dari Start Point (biar tetap lurus datar)
-        float spawnY = startPoint.position.y;
-
-        // 3. Gabungkan
-        Vector3 finalSpawnPos = new Vector3(spawnX, spawnY, 0);
-
-        // -----------------------------
-
-        GameObject newChunk = Instantiate(prefabToSpawn, finalSpawnPos, Quaternion.identity);
-
+        // Spawn event item jika ada
         Transform eventItemPoint = newChunk.transform.Find("EventItemSpawn");
             
         if (eventChunk && eventItemPoint != null && eventItems.Count > 0)
         {
             Debug.Log("Spawning Event Item");
             GameObject eventItemPrefab = eventItems[Random.Range(0, eventItems.Count)];
-            if (eventItemPrefab == null)
+            if (eventItemPrefab != null)
             {
-                Debug.LogError("Event item prefab is NULL or destroyed!");
+                Instantiate(eventItemPrefab, eventItemPoint.position, Quaternion.identity, newChunk.transform);
             }
-            Instantiate(eventItemPrefab, eventItemPoint.position, Quaternion.identity, newChunk.transform);
+            else
+            {
+                Debug.LogError("Event item prefab is NULL!");
+            }
         }
 
+        // Update exit point untuk chunk selanjutnya
         ChunkExitPoint newExit = newChunk.GetComponentInChildren<ChunkExitPoint>();
 
         if (newExit != null)
@@ -95,7 +116,7 @@ public class ChunkGenerator : MonoBehaviour
         }
         else
         {
-            Debug.LogError("AWAS: Prefab ini lupa dikasih script ChunkExitPoint!");
+            Debug.LogError($"AWAS: Prefab '{prefabToSpawn.name}' lupa dikasih script ChunkExitPoint!");
         }
     }
 }
